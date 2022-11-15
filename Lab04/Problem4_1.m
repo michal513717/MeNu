@@ -6,11 +6,19 @@ matrix = [
     7,8,9;
 ];
 
-[L,U] = myLu(matrix,0);
+[L,U] = myLu(matrix,1),
 
-ahat = L * U,
+% ahat = L * U,
+[A,B] = lu(matrix);
+
+Ahat = A*B,
+Ahat2 = L*U,
+
+% [L,U] = lu(A) factorizes the full or sparse matrix A into an upper
+% triangular matrix U and a permuted lower triangular matrix L such that A = L*U.
 
 function [L,U] = myLu(A, choice)
+
 [N,N] = size(A);
 if(choice == 0) % prosciej, wolniej -----------------------------------------
   L = eye(N); U = zeros(N,N);

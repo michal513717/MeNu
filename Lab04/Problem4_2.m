@@ -34,3 +34,8 @@ end
 U = L.';
 
 end
+
+
+% Jest to zwi  ̨azane z faktem,  ze macierz  trójkatna górna U jest w takim przypadku 
+% równa transpozycji macierzy trójk  ̨atnej dolnej (U = L) i nie musi byc obliczana
+% - co redukuje złozonosc obliczeniow  o połow̨e.
